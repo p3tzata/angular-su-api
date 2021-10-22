@@ -17,15 +17,15 @@ app.get("/moviesDb/popular", (req, res, next) => {
 //res.json(req.query.fake_api_key);
 res.json({result:[
 	{id:"1",
-	image_url:"",
+	image_url:"/assets/images/ladybird.jpg",
 	title:"title1",
 	release_date:"01.01.2021"},
 	{id:"2",
-	image_url:"",
+	image_url:"/assets/images/ladybird.jpg",
 	title:"title2",
 	release_date:"01.01.2021"},
 	{id:"3",
-	image_url:"",
+	image_url:"/assets/images/ladybird.jpg",
 	title:"title3",
 	release_date:"01.01.2021"}
 ]});
