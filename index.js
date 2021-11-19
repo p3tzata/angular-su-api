@@ -34,6 +34,43 @@ res.json({result:[
 
 
 
+app.get("/moviesDb/popularKids", (req, res, next) => {
+	
+	// res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+	//res.json(req.query.fake_api_key);
+	res.json({result:[
+		{id:"11",
+		image_url:"/assets/images/ladybird.jpg",
+		title:"title11",
+		release_date:"01.01.2021"},
+		{id:"21",
+		image_url:"/assets/images/ladybird.jpg",
+		title:"title22",
+		release_date:"01.01.2021"},
+		{id:"31",
+		image_url:"/assets/images/ladybird.jpg",
+		title:"title33",
+		release_date:"01.01.2021"}
+	]});
+	
+	});
+
+app.get("/moviesDb/movie/:id", (req, res, next) => {
+	
+	// res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+	//res.json(req.query.fake_api_key);
+	req.params.id;
+	res.json({result:
+		{id:req.params.id,
+		image_url:"/assets/images/ladybird.jpg",
+		title:"title"+req.params.id,
+		release_date:"01.01.2021",
+		homepage: "www.example.com",
+		genres:[{id:1,name:"drama"},{id:2,name:"action"}] }
+		
+	});
+	
+	});
 
 
 
