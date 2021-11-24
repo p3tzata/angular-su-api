@@ -73,6 +73,26 @@ app.get("/moviesDb/movie/:id", (req, res, next) => {
 	});
 
 
+	app.get("/moviesDb/movie/search/:stringSearch", (req, res, next) => {
+	
+		// res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+		//res.json(req.query.fake_api_key);
+		req.params.id;
+		res.json({result:[
+			{id:99,
+			image_url:"/assets/images/ladybird.jpg",
+			title:req.params.stringSearch,
+			release_date:"01.01.2021",
+			homepage: "www.example.com",
+			genres:[{id:1,name:"drama"},{id:2,name:"action"}] }]
+			
+		});
+		
+		});
+
+
+
+
 
 app.listen(3000, () => {
  console.log("Server running on port 3000");
