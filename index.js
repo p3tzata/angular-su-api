@@ -7,6 +7,7 @@ const localSignupStrategy = require('./passport/local-signup')
 const localLoginStrategy = require('./passport/local-login')
 const authRoutes = require('./routes/auth')
 const taskRoutes = require('./routes/task')
+const postRoutes= require('./routes/post')
 
 var express = require("express");
 var app = express();
@@ -44,6 +45,8 @@ app.use('/wsh-task/auth', authRoutes)
 app.use('/wsh-task/task', taskRoutes)
 
 
+app.use('/wsh-postComentStrc/auth', authRoutes)
+app.use('/wsh-postComentStrc/post', postRoutes)
 
 
 
